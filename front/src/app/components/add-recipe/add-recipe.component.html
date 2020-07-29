@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-8 mx-auto my-5">
+            <form #RecipeForm="ngForm" class="text-center border border-light p-5">
+                <p class="h4 mb-4">Add Recipe</p>
+                <div class="md-form">
+                    <input
+                        [(ngModel)]="recipeName"
+                        mdbInput
+                        type="text"
+                        id="recipe-name"
+                        class="form-control"
+                        name="name"
+                    >
+                    <label for="recipe-name">Name</label>
+                </div>
+                <div class="md-form">
+                    <textarea
+                        [(ngModel)]="recipeDescription"
+                        class="md-textarea form-control"
+                        rows="2"
+                        id="recipe-des"
+                        type="text"
+                        length="145"
+                        mdbCharCounter
+                        mdbInput
+                        name="description"
+                    >
+                    </textarea>
+                    <label for="recipe-des">Description</label>
+                </div>
+                <div class="md-form">
+                    <textarea
+                        [(ngModel)]="recipeIngredients"
+                        class="md-textarea form-control"
+                        rows="2"
+                        id="recipe-ingredients"
+                        type="text"
+                        length="145"
+                        mdbCharCounter
+                        mdbInput
+                        name="ingredients"
+                    >
+                    </textarea>
+                    <label for="recipe-ingredients">Ingredients</label>
+                </div>
+                <div class="md-form">
+                    <textarea
+                        [(ngModel)]="recipePreparing"
+                        class="md-textarea form-control"
+                        rows="2"
+                        id="recipe-preparing"
+                        type="text"
+                        length="145"
+                        mdbCharCounter
+                        mdbInput
+                        name="preparing"
+                    >
+                    </textarea>
+                    <label for="recipe-preparing">Preparing</label>
+                </div>
+                <div class="md-form">
+                    <!-- <input mdbInput type="text" id="recipe-img" class="form-control">
+                    <label for="recipe-img">Image URL</label> -->
+                </div>
+                <button mdbBtn color="info" type="submit" (click)="addRecipe(RecipeForm)">Add recipe</button>
+                <button mdbBtn color="danger" type="button" routerLink="/">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
