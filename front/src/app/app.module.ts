@@ -10,13 +10,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AddRecipeComponent } from './components/add-recipe/add-recipe.component';
+import { RecipeComponent } from './components/recipe/recipe.component';
+import { RecipeTeaserComponent } from './components/recipe-teaser/recipe-teaser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavComponent,
-    AddRecipeComponent
+    AddRecipeComponent,
+    RecipeComponent,
+    RecipeTeaserComponent
   ],
   imports: [
     BrowserModule,

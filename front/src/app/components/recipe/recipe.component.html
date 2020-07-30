@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-sm-12 col-lg-6 mb-4 text-center">
+            <img src="https://www.liveeatlearn.com/wp-content/uploads/2019/07/caesar-salad-photo-vert-500x500.jpg" alt="recipe img" class="img-fluid" style="max-height: 300px">
+
+            <p class="text-left" *ngIf="recipe.description">{{recipe.description}}</p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <h3 class="font-weight-bold">Ingredients</h3>
+            <p>{{recipe.ingredients}}</p>
+        </div>
+        <div class="col-sm-12 col-lg-6 my-4">
+            <h3 class="font-weight-bold">Preparing</h3>
+            <p>{{recipe.preparing}}</p>
+        </div>
+    </div>
+</div>

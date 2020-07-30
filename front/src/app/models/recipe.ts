@@ -5,5 +5,5 @@ export interface Recipe {
     id: number;
     ingredients: string;
     preparing: string;
-    // time: number;
+    time: string;
 }

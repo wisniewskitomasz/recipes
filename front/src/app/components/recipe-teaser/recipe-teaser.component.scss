@@ -1,0 +1,15 @@
+.recipe {
+    width: 100%;
+    position: relative;
+
+    .recipe-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 1));
+
+        .time {
+            color: lightgrey;
+        }
+    }
+}

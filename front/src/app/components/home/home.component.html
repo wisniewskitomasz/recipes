@@ -1,9 +1,11 @@
 <div class="container">
-    <div class="row text-center">
-      <div class="col-sm" *ngFor="let recipe of recipes$ | async">
-        {{ recipe.name }} <br>
-        <button (click)="removeRecipe(recipe.id)">delete</button>
+    <div class="row py-5">
+      <div class="col-sm-12">
+        <h1 class="text-dark h2 font-weight-bold">Latest recipes</h1>
+      </div>
+      <div class="col-sm-12 col-md-4 my-3 text-center" *ngFor="let recipe of recipes$ | async">
+        <app-recipe-teaser [data]="recipe"></app-recipe-teaser>
       </div>
     </div>
-    <!-- <button (click)="addRecipe(recipe)">add</button> -->
+    <!-- <button (click)="removeRecipe(recipe.id)">delete</button> -->
 </div>
