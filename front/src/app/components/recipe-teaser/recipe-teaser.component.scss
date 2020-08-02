@@ -1,12 +1,8 @@
 .recipe {
     width: 100%;
     position: relative;
-    background: url(https://www.liveeatlearn.com/wp-content/uploads/2019/07/caesar-salad-photo-vert-500x500.jpg);
     height: 250px;
-    background-position: center;
-    background-size: cover;
     border-radius: 1rem !important;
-
     .recipe-info {
         position: absolute;
         bottom: 0;
@@ -18,5 +14,21 @@
         .time {
             color: lightgrey;
         }
+    }
+
+    &.lunch {
+        background: url(https://www.liveeatlearn.com/wp-content/uploads/2019/07/caesar-salad-photo-vert-500x500.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    &.dessert {
+        background: url(https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/coffee_terrine.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    &.snack {
+        background: url(https://www.seriouseats.com/recipes/images/2016/09/20160822-homemade-cheez-itz-vicky-wasik-15.jpg);
+        background-position: center;
+        background-size: cover;
     }
 }

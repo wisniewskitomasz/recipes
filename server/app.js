@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://recipes-e8e4c.firebaseio.com"
+  databaseURL: "https://recipes-d9f3a.firebaseio.com"
 });
 
 const db = admin.database();

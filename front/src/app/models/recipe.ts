@@ -5,6 +5,7 @@ export interface Recipe {
     ingredients: string;
     preparing: string;
     time: string;
+    type: string;
 }
 
 export interface RecipeState {

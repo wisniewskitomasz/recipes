@@ -17,6 +17,7 @@ export class AddRecipeComponent implements OnInit {
   recipePreparing: string;
   preparingTime: Array<string> = ["15 min", "30 min", "45 min", "1 hour", "1 hour 30 min", "2 hours", "3 hours"];
   time: number = 0;
+  foodType: string = 'snack';
 
   constructor(
     private store: Store<AppState>,

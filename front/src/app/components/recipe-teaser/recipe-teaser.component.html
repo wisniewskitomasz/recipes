@@ -1,4 +1,4 @@
-<div class="recipe" routerLink="/recipe/{{data.id}}">
+<div class="recipe" routerLink="/recipe/{{data.id}}" [ngClass]="(data.type=='snack')?'snack':(data.type=='lunch')?'lunch':'dessert'">
     <div class="recipe-info text-left px-3 py-4">
       <p class="mt-5 mb-1 py-0 time">{{ data.time }}</p>
       <p class="h5 text-white font-weight-bolder">{{ data.name }}</p>

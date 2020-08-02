@@ -73,6 +73,21 @@
                     </textarea>
                     <label for="recipe-preparing">Preparing</label>
                 </div>
+                <div class="radio-btn mb-4">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="snack" name="type" mdbInput [(ngModel)]="foodType" value="snack">
+                        <label class="custom-control-label" for="snack">snack</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="dessert" name="type" mdbInput [(ngModel)]="foodType" value="dessert">
+                        <label class="custom-control-label" for="dessert">dessert</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="lunch" name="type" mdbInput
+                        [(ngModel)]="foodType" value="lunch">
+                        <label class="custom-control-label" for="lunch">lunch</label>
+                    </div>
+                </div>
                 <button mdbBtn color="info" type="submit" (click)="addRecipe(RecipeForm)">Add recipe</button>
                 <button mdbBtn color="danger" type="button" routerLink="/">Cancel</button>
             </form>
