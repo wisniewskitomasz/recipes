@@ -1,20 +1,16 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark orange" [containerInside]="true">
     <mdb-navbar-brand>
-        <a class="navbar-brand" routerLink="">Home</a>
+        <a class="navbar-brand" routerLink="">
+            <img src="./../../../assets/home.png" alt="home">
+        </a>
     </mdb-navbar-brand>
     <links>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>recipe</a>
+            <li class="nav-item" *ngFor="let recipe of recipes$ | async; let i = index">
+                <a class="nav-link waves-light" mdbWavesEffect [routerLink]="'recipe/'+ recipe.id">Sample {{i + 1}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>recipe</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect>recipe</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link waves-light" mdbWavesEffect routerLink="/add"><button>Add recipe</button></a>
+                <a class="nav-link waves-light" mdbWavesEffect routerLink="/add">Add recipe</a>
             </li>
         </ul>
     </links>

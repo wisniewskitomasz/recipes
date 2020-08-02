@@ -43,7 +43,7 @@
                     </textarea>
                     <label for="recipe-des">Description</label>
                 </div>
-                <div class="md-form">
+                <div class="md-form" mdbTooltip="Use ';' to separate ingredients" placement="bottom">
                     <textarea
                         [(ngModel)]="recipeIngredients"
                         class="md-textarea form-control"
@@ -58,7 +58,7 @@
                     </textarea>
                     <label for="recipe-ingredients">Ingredients</label>
                 </div>
-                <div class="md-form">
+                <div class="md-form" mdbTooltip="Use ';' to separate step" placement="bottom">
                     <textarea
                         [(ngModel)]="recipePreparing"
                         class="md-textarea md-textarea-auto form-control"
@@ -72,10 +72,6 @@
                     >
                     </textarea>
                     <label for="recipe-preparing">Preparing</label>
-                </div>
-                <div class="md-form">
-                    <!-- <input mdbInput type="text" id="recipe-img" class="form-control">
-                    <label for="recipe-img">Image URL</label> -->
                 </div>
                 <button mdbBtn color="info" type="submit" (click)="addRecipe(RecipeForm)">Add recipe</button>
                 <button mdbBtn color="danger" type="button" routerLink="/">Cancel</button>

@@ -4,6 +4,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { StoreModule } from '@ngrx/store';
 import { RecipeReducer } from './store/reducers/recipe.reducer'
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { AddRecipeComponent } from './components/add-recipe/add-recipe.component';
 import { RecipeComponent } from './components/recipe/recipe.component';
 import { RecipeTeaserComponent } from './components/recipe-teaser/recipe-teaser.component';
+import { RecipeEffects } from './store/effects/recipe.effects';
+import { RecipeDetalisComponent } from './components/recipe/recipe-detalis/recipe-detalis.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import { RecipeTeaserComponent } from './components/recipe-teaser/recipe-teaser.
     NavComponent,
     AddRecipeComponent,
     RecipeComponent,
-    RecipeTeaserComponent
+    RecipeTeaserComponent,
+    RecipeDetalisComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,9 @@ import { RecipeTeaserComponent } from './components/recipe-teaser/recipe-teaser.
     StoreModule.forRoot({
       recipe: RecipeReducer
     }),
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    EffectsModule.forRoot([RecipeEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

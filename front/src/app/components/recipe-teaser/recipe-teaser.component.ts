@@ -14,5 +14,6 @@ export class RecipeTeaserComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  test() {
+  }
 }

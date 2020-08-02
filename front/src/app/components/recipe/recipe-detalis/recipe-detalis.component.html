@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-sm-12 col-lg-6 mb-1 text-center">
+            <app-recipe-teaser [data]="recipe"></app-recipe-teaser>
+            <p class="text-left mt-3" *ngIf="recipe.description">{{recipe.description}}</p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <button type="button" mdbBtn color="danger" mdbWavesEffect (click)="remove()">Remove</button>
+            <h3 class="font-weight-bold pt-4">Ingredients</h3>
+            <p>{{recipe.ingredients}}</p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <h3 class="font-weight-bold">Preparing</h3>
+            <p>{{recipe.preparing}}</p>
+        </div>
+    </div>
+</div>

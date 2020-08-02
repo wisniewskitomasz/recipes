@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable, Subscription, Subject } from 'rxjs';
 import { Recipe } from 'src/app/models/recipe';
 import { AppState } from 'src/app/models/app-state.model';
 import { Store } from '@ngrx/store';
+import { LoadRecipes, RemoveRecipe } from 'src/app/store/actions/recipe.actions';
+import { RecipeService } from 'src/app/services/recipe-service.service';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-recipe',
@@ -12,26 +15,8 @@ import { Store } from '@ngrx/store';
 })
 export class RecipeComponent implements OnInit {
 
-  sub;
-  recipe;
-  recipes$: Observable<Recipe[]>;
-  constructor(private route: ActivatedRoute,
-    private store: Store<AppState>) {
-      this.recipes$ = this.store.select(store => store.recipe)
-    }
+  constructor() { }
 
-  ngOnInit(): void {
-
-    this.sub = this.route.params.subscribe(params => {
-      console.log(params);
-    });
-
-    this.recipes$.subscribe(data => {
-      console.log(data);
-    })
-  }
-  ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
+  ngOnInit() { }
 
 }

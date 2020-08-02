@@ -1,5 +1,5 @@
-import { Recipe } from './recipe'
+import { RecipeState } from './recipe'
 
 export interface AppState {
-    readonly recipe: Array<Recipe>
+    readonly recipe: RecipeState
 }
