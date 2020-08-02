@@ -1,6 +1,6 @@
 https://app-recipesapp.herokuapp.com/
 
-#Recipe App  
+# Recipe App  
 
 ## Table of contents
 * [General info](#general-info)
